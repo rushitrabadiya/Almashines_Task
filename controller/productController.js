@@ -35,7 +35,9 @@ exports.addProduct = async (req, res) => {
 
 exports.getProducts = async (req, res) => {
   try {
-    const products = await Product.find();
+    const products = await Product.find().select(
+      "-priceHistory -url -createdAt -updatedAt"
+    );
     return sendResponse(res, products, 200, "Products fetched successfully");
   } catch (error) {
     return handleError(res, error, 500, "Failed to scrape product");
@@ -45,7 +47,9 @@ exports.getProductById = async (req, res) => {
   const { productId } = req.params;
 
   try {
-    const product = await Product.findById(productId);
+    const product = await Product.findById(productId).select(
+      "-priceHistory -url -createdAt -updatedAt"
+    );
     if (!product) {
       return handleError(res, null, 404, "Product not found");
     }
@@ -77,7 +81,7 @@ exports.checkPrice = async (req, res) => {
           "Price remains unchanged."
         );
       } else {
-        product.priceHistory.push({ price: newPrice });
+        product.priceHistory.push({ price: oldPrice });
         product.price = newPrice;
         await product.save();
         return sendResponse(
@@ -106,11 +110,93 @@ exports.checkDescription = async (req, res) => {
 
     return sendResponse(
       res,
-      { description: product.description },
+      { title: product.title, description: product.description },
       200,
       "Product description fetched successfully"
     );
   } catch (error) {
     return handleError(res, error, 500, "Failed to fetch product description");
+  }
+};
+
+exports.searchAndFilterProducts = async (req, res) => {
+  try {
+    const { title, minPrice, maxPrice, sortRating, sortPrice } = req.query;
+
+    let filter = {};
+
+    if (title) {
+      filter.title = { $regex: title, $options: "i" };
+    }
+
+    if (minPrice || maxPrice) {
+      filter.price = {};
+      if (minPrice) {
+        filter.price.$gte = Number(minPrice);
+      }
+      if (maxPrice) {
+        filter.price.$lte = Number(maxPrice);
+      }
+    }
+    let query = Product.find(filter).select(
+      "-priceHistory -url -createdAt -updatedAt"
+    );
+
+    let sortOptions = {};
+    if (sortRating) {
+      const sortDirection = sortRating === "lowToHigh" ? 1 : -1;
+      // 1 for ascending, -1 for descending
+      sortOptions.rating = sortDirection;
+      // query = query.sort({ rating: sortDirection, price: 1 });
+    }
+    if (sortPrice) {
+      const priceSortDirection = sortPrice === "lowToHigh" ? 1 : -1;
+      sortOptions.price = priceSortDirection;
+      // query = query.sort({ price: priceSortDirection, rating: -1 });
+    }
+
+    if (Object.keys(sortOptions).length > 0) {
+      query = query.sort(sortOptions);
+    }
+
+    const products = await query;
+
+    if (!products.length) {
+      return handleError(
+        res,
+        null,
+        404,
+        "No products found matching your criteria."
+      );
+    }
+    return sendResponse(res, products, 200, "Products fetched successfully");
+  } catch (error) {
+    return handleError(res, error, 500, "Error fetching products");
+  }
+};
+
+exports.getShowcaseProductsFiled = async (req, res) => {
+  try {
+    const { fields } = req.query;
+
+    let selectFields = "";
+
+    if (fields) {
+      selectFields = fields.split(",").join(" ");
+    }
+    const products = await Product.find().select(selectFields);
+
+    if (!products.length) {
+      return handleError(res, null, 404, "No products found for showcase.");
+    }
+
+    return sendResponse(
+      res,
+      products,
+      200,
+      "Showcase products fetched successfully"
+    );
+  } catch (error) {
+    return handleError(res, error, 500, "Error fetching showcase products");
   }
 };

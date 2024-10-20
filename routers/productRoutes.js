@@ -6,7 +6,11 @@ const router = express.Router();
 router
   .route("/")
   .post(productController.addProduct)
-  .get(productController.getProducts);
+  .get(productController.getShowcaseProductsFiled);
+
+router.get("/search", productController.searchAndFilterProducts);
+
+router.get("/all", productController.getProducts);
 
 router.get("/:productId/check-price", productController.checkPrice);
 router.get("/:productId/check-description", productController.checkDescription);

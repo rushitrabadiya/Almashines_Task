@@ -2,9 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const productRoutes = require("./routers/productRoutes");
 const { DB, PORT } = require("./config/config");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(DB, {
   useNewUrlParser: true,

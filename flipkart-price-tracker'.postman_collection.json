@@ -7,13 +7,282 @@
 	},
 	"item": [
 		{
+			"name": "Filter",
+			"item": [
+				{
+					"name": "Filter By title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?title=Gamepad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Gamepad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by max Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?maxPrice=20000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "maxPrice",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by min price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?minPrice=20000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "minPrice",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter By a min and max price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?minPrice=1000&maxPrice=15000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "minPrice",
+									"value": "1000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "15000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by min max and title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?title=Gamepad&minPrice=1400&maxPrice=1500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Gamepad"
+								},
+								{
+									"key": "minPrice",
+									"value": "1400"
+								},
+								{
+									"key": "maxPrice",
+									"value": "1500"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating  - low To High",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?sortRating=lowToHigh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "sortRating",
+									"value": "lowToHigh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating  - High To low",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?sortRating=HightToLow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "sortRating",
+									"value": "HightToLow"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Price - low To High",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?sortPrice=lowToHigh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "sortPrice",
+									"value": "lowToHigh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Price - High To low",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/products/search?sortPrice=HightToLow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "sortPrice",
+									"value": "HightToLow"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "add link",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"url\": \"https://www.flipkart.com/evofox-elite-x-wireless-usb-gamepad/p/itm706d03aa7d692?pid=ACCGNBPPTYQ9XKRR&lid=LSTACCGNBPPTYQ9XKRRDSIMUX&marketplace=FLIPKART&store=4rr%2Fkm5%2Fr39%2Fa7g&srno=b_1_7&otracker=browse&fm=organic&iid=e0540996-6e0a-48c4-a824-f93e5e254cce.ACCGNBPPTYQ9XKRR.SEARCH&ppt=hp&ppn=homepage&ssid=rnf07e5xc00000001729418044867\"\r\n}\r\n",
+					"raw": "{\r\n  \"url\": \"https://www.flipkart.com/ingco-lithium-ion-ciwli2050-cordless-impact-wrench/p/itm183c6d527ddcc?pid=IMWGYFZ9X637E3SG&lid=LSTIMWGYFZ9X637E3SGQU0PKJ&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3AIMWGQQCZSWVDPV7X%3Bl%3ALSTIMWGQQCZSWVDPV7XLCKPDF%3Bpt%3App%3Buid%3Aea10ffab-8efc-11ef-b575-1ffea2c31ba7%3B.IMWGYFZ9X637E3SG&ppt=pp&ppn=pp&ssid=8li9m71mxc0000001729432158375&otracker=pp_reco_Similar%2BProducts_4_36.productCard.PMU_HORIZONTAL_INGCO%2BLithium-Ion%2BCIWLI2050%2BCordless%2BImpact%2BWrench_IMWGYFZ9X637E3SG_productRecommendation%2Fsimilar_3&otracker1=pp_reco_PINNED_productRecommendation%2Fsimilar_Similar%2BProducts_GRID_productCard_cc_4_NA_view-all&cid=IMWGYFZ9X637E3SG\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +311,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/v1/products/",
+					"raw": "http://localhost:5000/api/v1/products/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -52,7 +321,7 @@
 						"api",
 						"v1",
 						"products",
-						""
+						"all"
 					]
 				}
 			},
@@ -64,7 +333,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/v1/products/6714ebd6b38e58ed56cde5b1/check-price",
+					"raw": "http://localhost:5000/api/v1/products/6714f811bba6a193607754ee/check-price",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -74,7 +343,7 @@
 						"api",
 						"v1",
 						"products",
-						"6714ebd6b38e58ed56cde5b1",
+						"6714f811bba6a193607754ee",
 						"check-price"
 					]
 				}
@@ -110,7 +379,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/v1/products/6714ca4140b34311e00b24a9",
+					"raw": "http://localhost:5000/api/v1/products/6714ebd6b38e58ed56cde5b1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,9 +389,17 @@
 						"api",
 						"v1",
 						"products",
-						"6714ca4140b34311e00b24a9"
+						"6714ebd6b38e58ed56cde5b1"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Showcase Products Filed",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
