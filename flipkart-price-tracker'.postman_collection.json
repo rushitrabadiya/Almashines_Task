@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "6cae87f0-900a-4260-be89-5687f7e0390d",
+		"name": "flipkart-price-tracker'",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33483080"
+	},
+	"item": [
+		{
+			"name": "add link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.flipkart.com/evofox-elite-x-wireless-usb-gamepad/p/itm706d03aa7d692?pid=ACCGNBPPTYQ9XKRR&lid=LSTACCGNBPPTYQ9XKRRDSIMUX&marketplace=FLIPKART&store=4rr%2Fkm5%2Fr39%2Fa7g&srno=b_1_7&otracker=browse&fm=organic&iid=e0540996-6e0a-48c4-a824-f93e5e254cce.ACCGNBPPTYQ9XKRR.SEARCH&ppt=hp&ppn=homepage&ssid=rnf07e5xc00000001729418044867\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check -price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products/6714ebd6b38e58ed56cde5b1/check-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"6714ebd6b38e58ed56cde5b1",
+						"check-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check  - description",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products/6714ca4140b34311e00b24a9/check-description",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"6714ca4140b34311e00b24a9",
+						"check-description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products/6714ca4140b34311e00b24a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"6714ca4140b34311e00b24a9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
