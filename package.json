@@ -2,7 +2,7 @@
   "name": "task",
   "version": "1.0.0",
   "description": "",
-  "main": "demo.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,7 @@
     "axios": "^1.7.7",
     "body": "^5.1.0",
     "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "joi": "^17.13.3",
     "mongoose": "^8.7.2",
