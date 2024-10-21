@@ -1,0 +1,86 @@
+.add-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 100%;
+}
+/* AddProduct.css */
+.add-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.add-product h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.add-product form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-product input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.add-product button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-product button:hover {
+  background-color: #0056b3;
+}
+
+.add-product button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.add-product div {
+  margin-top: 10px;
+  color: red; /* Set error text to red */
+  font-weight: bold;
+}
+
+/* Add some responsive behavior */
+@media (max-width: 500px) {
+  .add-product {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .add-product h2 {
+    font-size: 20px;
+  }
+
+  .add-product input,
+  .add-product button {
+    font-size: 14px;
+  }
+}

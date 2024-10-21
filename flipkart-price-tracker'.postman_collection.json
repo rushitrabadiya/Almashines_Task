@@ -351,29 +351,6 @@
 			"response": []
 		},
 		{
-			"name": "check  - description",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/v1/products/6714ca4140b34311e00b24a9/check-description",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"products",
-						"6714ca4140b34311e00b24a9",
-						"check-description"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Get product by id",
 			"request": {
 				"method": "GET",
