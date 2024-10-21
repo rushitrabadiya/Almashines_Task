@@ -1,384 +1,299 @@
 {
-	"info": {
-		"_postman_id": "6cae87f0-900a-4260-be89-5687f7e0390d",
-		"name": "flipkart-price-tracker'",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "33483080"
-	},
-	"item": [
-		{
-			"name": "Filter",
-			"item": [
-				{
-					"name": "Filter By title",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?title=Gamepad",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "title",
-									"value": "Gamepad"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by max Price",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?maxPrice=20000",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "maxPrice",
-									"value": "20000"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by min price",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?minPrice=20000",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "minPrice",
-									"value": "20000"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter By a min and max price",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?minPrice=1000&maxPrice=15000",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "minPrice",
-									"value": "1000"
-								},
-								{
-									"key": "maxPrice",
-									"value": "15000"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "filter by min max and title",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?title=Gamepad&minPrice=1400&maxPrice=1500",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "title",
-									"value": "Gamepad"
-								},
-								{
-									"key": "minPrice",
-									"value": "1400"
-								},
-								{
-									"key": "maxPrice",
-									"value": "1500"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Rating  - low To High",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?sortRating=lowToHigh",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "sortRating",
-									"value": "lowToHigh"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Rating  - High To low",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?sortRating=HightToLow",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "sortRating",
-									"value": "HightToLow"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Price - low To High",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?sortPrice=lowToHigh",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "sortPrice",
-									"value": "lowToHigh"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Price - High To low",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/v1/products/search?sortPrice=HightToLow",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"search"
-							],
-							"query": [
-								{
-									"key": "sortPrice",
-									"value": "HightToLow"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "add link",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"url\": \"https://www.flipkart.com/ingco-lithium-ion-ciwli2050-cordless-impact-wrench/p/itm183c6d527ddcc?pid=IMWGYFZ9X637E3SG&lid=LSTIMWGYFZ9X637E3SGQU0PKJ&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3AIMWGQQCZSWVDPV7X%3Bl%3ALSTIMWGQQCZSWVDPV7XLCKPDF%3Bpt%3App%3Buid%3Aea10ffab-8efc-11ef-b575-1ffea2c31ba7%3B.IMWGYFZ9X637E3SG&ppt=pp&ppn=pp&ssid=8li9m71mxc0000001729432158375&otracker=pp_reco_Similar%2BProducts_4_36.productCard.PMU_HORIZONTAL_INGCO%2BLithium-Ion%2BCIWLI2050%2BCordless%2BImpact%2BWrench_IMWGYFZ9X637E3SG_productRecommendation%2Fsimilar_3&otracker1=pp_reco_PINNED_productRecommendation%2Fsimilar_Similar%2BProducts_GRID_productCard_cc_4_NA_view-all&cid=IMWGYFZ9X637E3SG\"\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/v1/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get all product",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/v1/products/all",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"products",
-						"all"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "check -price",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/v1/products/6714f811bba6a193607754ee/check-price",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"products",
-						"6714f811bba6a193607754ee",
-						"check-price"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get product by id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/v1/products/6714ebd6b38e58ed56cde5b1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"products",
-						"6714ebd6b38e58ed56cde5b1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get Showcase Products Filed",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "6cae87f0-900a-4260-be89-5687f7e0390d",
+    "name": "flipkart-price-tracker'",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33483080"
+  },
+  "item": [
+    {
+      "name": "Filter",
+      "item": [
+        {
+          "name": "Filter By title",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?title=Gamepad",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "Gamepad"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by max Price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?maxPrice=20000",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "maxPrice",
+                  "value": "20000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by min price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?minPrice=20000",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "20000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter By a min and max price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?minPrice=1000&maxPrice=15000",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "1000"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "15000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "filter by min max and title",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?title=Gamepad&minPrice=1400&maxPrice=1500",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "Gamepad"
+                },
+                {
+                  "key": "minPrice",
+                  "value": "1400"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "1500"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rating  - low To High",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?sortRating=lowToHigh",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "sortRating",
+                  "value": "lowToHigh"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rating  - High To low",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?sortRating=HightToLow",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "sortRating",
+                  "value": "HightToLow"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Price - low To High",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?sortPrice=lowToHigh",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "sortPrice",
+                  "value": "lowToHigh"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Price - High To low",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/search?sortPrice=HightToLow",
+              "protocol": "https",
+              "host": ["almashines-task-j4xu", "onrender", "com"],
+              "path": ["api", "v1", "products", "search"],
+              "query": [
+                {
+                  "key": "sortPrice",
+                  "value": "HightToLow"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "add link",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"url\": \"https://www.flipkart.com/bosch-gds-250-li-2-battery-gba-18v-4-0ah-quick-charger-gal18v-40-cordless-impact-wrench/p/itm8c0f11e21bdc8?pid=IMWGQQCZSWVDPV7X&lid=LSTIMWGQQCZSWVDPV7XLCKPDF&marketplace=FLIPKART&store=h1m%2Fhww%2Fslm&srno=b_1_14&otracker=browse&fm=organic&iid=48da83bf-aeca-4f0c-8a27-d0faa7a86b79.IMWGQQCZSWVDPV7X.SEARCH&ppt=browse&ppn=browse&ssid=8li9m71mxc0000001729432158375\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products",
+          "protocol": "https",
+          "host": ["almashines-task-j4xu", "onrender", "com"],
+          "path": ["api", "v1", "products"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/all",
+          "protocol": "https",
+          "host": ["almashines-task-j4xu", "onrender", "com"],
+          "path": ["api", "v1", "products", "all"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "check -price",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/6714ebd6b38e58ed56cde5b1/check-price",
+          "protocol": "https",
+          "host": ["almashines-task-j4xu", "onrender", "com"],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "6714ebd6b38e58ed56cde5b1",
+            "check-price"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get product by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products/6714ebd6b38e58ed56cde5b1",
+          "protocol": "https",
+          "host": ["almashines-task-j4xu", "onrender", "com"],
+          "path": ["api", "v1", "products", "6714ebd6b38e58ed56cde5b1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get Showcase Products Filed",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://almashines-task-j4xu.onrender.com/api/v1/products?fields=title,price",
+          "protocol": "https",
+          "host": ["almashines-task-j4xu", "onrender", "com"],
+          "path": ["api", "v1", "products"],
+          "query": [
+            {
+              "key": "fields",
+              "value": "title,price"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }

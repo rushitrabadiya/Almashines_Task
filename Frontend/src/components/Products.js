@@ -37,7 +37,7 @@ const Products = ({ products, loading, error }) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/products/${id}/check-price`
+        `https://almashines-task-j4xu.onrender.com/api/v1/products/${id}/check-price`
       );
       setPriceData((prevData) => ({
         ...prevData,

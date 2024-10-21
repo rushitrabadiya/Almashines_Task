@@ -12,13 +12,16 @@ const AddProduct = ({ onProductAdded }) => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/v1/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      });
+      const response = await fetch(
+        "https://almashines-task-j4xu.onrender.com/api/v1/products",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ url }),
+        }
+      );
 
       const responseData = await response.json();
 

@@ -13,7 +13,9 @@ function App() {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/v1/products/all");
+      const response = await fetch(
+        "https://almashines-task-j4xu.onrender.com/api/v1/products/all"
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch products");
       }
